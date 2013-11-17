@@ -22,6 +22,11 @@ module.exports = function() {
           ['minlength:3', 'El email debe tener al menos 3 caracteres'],
         ],
       },
+
+      mysubmit: {
+        kind: 'submit',
+        label: 'Send button',
+      }
     },
   };
 };
