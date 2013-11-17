@@ -54,6 +54,14 @@ module.exports = function(grunt) {
           'tmp/default_options.html': ['test/fixtures/simple_form.html'],
         },
       },
+
+      default_options_full: {
+        options: {
+        },
+        files: {
+          'tmp/default_options_full.html': ['test/fixtures/full_form.html'],
+        },
+      },
       /*custom_options: {
         options: {
           separator: ': ',
