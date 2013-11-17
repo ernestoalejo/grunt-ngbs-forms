@@ -17,7 +17,10 @@ module.exports = function() {
           'myarg1': 'myvalue1',
           'myarg2': 'myvalue2',
         },
-        validations: ['required', 'minlength:3'],
+        validations: [
+          ['required', 'El email es obligatorio'],
+          ['minlength:3', 'El email debe tener al menos 3 caracteres'],
+        ],
       },
     },
   };
