@@ -335,4 +335,4 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
-_(Nothing yet)_
+* 2013-11-18   v0.1.0   Release initial uncomplete ngbs_forms task.
