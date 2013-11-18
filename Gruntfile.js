@@ -70,6 +70,12 @@ module.exports = function(grunt) {
       tests: ['test/*_test.js'],
     },
 
+    bump: {
+      options: {
+        pushTo: 'origin',
+      },
+    },
+
   });
 
   // Actually load this plugin's task(s).
