@@ -23,6 +23,25 @@ module.exports = function() {
         ],
       },
 
+      myselect: {
+        kind: 'select',
+      },
+
+      myselectoptions: {
+        kind: 'select',
+        options: {
+          'myvalue1': 'mylabel1',
+          'myvalue2': 'mylabel2',
+        },
+      },
+
+      myselectng: {
+        kind: 'select',
+        args: {
+          'ng-options': 'items in list',
+        },
+      },
+
       mysubmit: {
         kind: 'submit',
         label: 'Send button',
