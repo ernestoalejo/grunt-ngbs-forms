@@ -171,7 +171,7 @@ required (`kind`). The rest are specific to which kind you choose.
 
 #### kind
 Type: `String`
-One of: `input`, `submit`
+One of: `input`, `submit`, `select`
 
 The kind of this form field.
 
@@ -284,6 +284,46 @@ return {
     mysubmit: {
       kind: 'submit',
       label: 'Send My Form',
+    },
+  },
+};
+```
+
+### Select field
+Generates a select tag in the form.
+
+#### label
+Type: `String`
+Default: ``
+
+Label for this select. If empty it will not be created.
+
+```js
+return {
+  fields: {
+    myselect: {
+      kind: 'select',
+      label: 'My Own Label',
+    },
+  },
+};
+```
+
+#### args
+Type: `Object`
+Default: `{}`
+
+Additional arguments for the select tag. It's an object of *name: value* items.
+
+```js
+return {
+  fields: {
+    myselect: {
+      kind: 'select',
+      args: {
+        myname: 'myvalue',
+        myname2: 'myvalue2',
+      },
     },
   },
 };

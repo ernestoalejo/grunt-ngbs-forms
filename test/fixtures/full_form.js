@@ -37,6 +37,7 @@ module.exports = function() {
 
       myselectng: {
         kind: 'select',
+        label: 'Select label',
         args: {
           'ng-options': 'items in list',
         },
