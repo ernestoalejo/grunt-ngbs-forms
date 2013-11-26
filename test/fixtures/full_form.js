@@ -43,6 +43,18 @@ module.exports = function() {
         },
       },
 
+      myselectrepeat: {
+        kind: 'select',
+        ngRepeatOptions: {
+          repeat: 'item in list',
+          value: '{{ item.label }}',
+          label: '{{ item.label }}',
+        },
+        options: {
+          'foo': 'bar',
+        }
+      },
+
       mysubmit: {
         kind: 'submit',
         label: 'Send button',

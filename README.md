@@ -323,6 +323,53 @@ return {
       args: {
         myname: 'myvalue',
         myname2: 'myvalue2',
+        'ng-options': 'item in list',
+      },
+    },
+  },
+};
+```
+
+#### options
+Type: `Object`
+Default: `{}`
+
+Options for the select. It should be pairs of *value: label* items.
+
+```js
+return {
+  fields: {
+    myselect: {
+      kind: 'select',
+      options: {
+        myvalue1: 'My Label 1',
+        'my-value-2': 'My Label 2',
+      },
+    },
+  },
+};
+```
+
+#### ngRepeatOptions
+Type: `Object`
+Default: `undefined`
+Object keys: `repeat`, `value` and `label`
+
+Generate options using ngRepeat directly in the option tag. If not needed
+(in AngularUI Select2 for example) ngOptions should be used directly
+(see args example).
+
+If it's undefined, it will not be generated.
+
+```js
+return {
+  fields: {
+    myselect: {
+      kind: 'select',
+      ngRepeatOptions: {
+        repeat: 'item in list',
+        value: '{{ item.value }}',
+        label: '{{ item.label }}',
       },
     },
   },
@@ -375,7 +422,8 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
-* 2013-11-18   v0.2.1   Fix templates path problem.
+* 2013-11-27   v0.3     Add repeated options to selects.
+* 2013-11-25   v0.2.1   Fix templates path problem.
 * 2013-11-18   v0.2.0   Add select builder.
 * 2013-11-18   v0.1.3   Some lint fixes and README updates.
 * 2013-11-18   v0.1.0   Release initial uncomplete ngbs_forms task.
