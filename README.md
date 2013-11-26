@@ -232,7 +232,7 @@ return {
 };
 ```
 
-#### args
+#### attrs
 Type: `Object`
 Default: `{}`
 
@@ -243,7 +243,7 @@ return {
   fields: {
     myinput: {
       kind: 'input',
-      args: {
+      attrs: {
         myname: 'myvalue',
         myname2: 'myvalue2',
       },
@@ -309,7 +309,7 @@ return {
 };
 ```
 
-#### args
+#### attrs
 Type: `Object`
 Default: `{}`
 
@@ -320,7 +320,7 @@ return {
   fields: {
     myselect: {
       kind: 'select',
-      args: {
+      attrs: {
         myname: 'myvalue',
         myname2: 'myvalue2',
         'ng-options': 'item in list',
@@ -357,7 +357,7 @@ Object keys: `repeat`, `value` and `label`
 
 Generate options using ngRepeat directly in the option tag. If not needed
 (in AngularUI Select2 for example) ngOptions should be used directly
-(see args example).
+(see attrs example).
 
 If it's undefined, it will not be generated.
 
@@ -422,7 +422,8 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
-* 2013-11-27   v0.3     Add repeated options to selects.
+* 2013-11-27   v0.3.1   Change args to the semantically correct attrs.
+* 2013-11-27   v0.3.0   Add repeated options to selects.
 * 2013-11-25   v0.2.1   Fix templates path problem.
 * 2013-11-18   v0.2.0   Add select builder.
 * 2013-11-18   v0.1.3   Some lint fixes and README updates.

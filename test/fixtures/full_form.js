@@ -13,7 +13,7 @@ module.exports = function() {
         label: 'Email',
         type: 'email',
         placeholder: 'test@example',
-        args: {
+        attrs: {
           'myarg1': 'myvalue1',
           'myarg2': 'myvalue2',
         },
@@ -38,7 +38,7 @@ module.exports = function() {
       myselectng: {
         kind: 'select',
         label: 'Select label',
-        args: {
+        attrs: {
           'ng-options': 'items in list',
         },
       },
