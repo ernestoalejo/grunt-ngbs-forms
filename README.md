@@ -423,7 +423,11 @@ using a colons: `minlength:3`, `othervalidation:arg1,arg2,arg3`.
 Not all fields accept all validations, refer to the individual validations documentation
 to see which fields can be applied to.
 
-Example using an input tag with a label and two validations:
+There's an **extended format** for cases that requires a colon inside an arg, though
+the simple format should be always preferred. You can pass directily the array
+containing *[name, arg1, arg2, message]* to the validatior.
+
+Example using an input tag with a label and three validations:
 
 ```js
 return {
@@ -434,6 +438,7 @@ return {
       validations: [
         ['required', 'My data it is required'],
         ['minlength:3', 'My data has to be larger than 3 chars'],
+        ['minlength', 3, 'Extended format for the validator']
       ],
     },
   },
@@ -458,7 +463,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
-* 2013-11-28   v0.4     Add prefix & suffix to inputs.
+* 2013-11-28   v0.4     Add prefix & suffix to inputs. Extended format for the validators. 
 * 2013-11-27   v0.3.3   Fix validations generation. Fix angular error detection. Disable submit button if the form has errors. Less verbose output.
 * 2013-11-27   v0.3.2   Space in the submit field. Fix validator generation.
 * 2013-11-27   v0.3.1   Change args to the semantically correct attrs.

@@ -26,13 +26,17 @@
   </div>
 
 
-  <div class="form-group">
+  <div class="form-group" ng-class="{'has-error': f0.sent && f0.f0myinputaffix.$invalid}">
 
     <div class="input-group">
       <span class="input-group-addon">myprefix</span>
-      <input type="text" class="form-control" placeholder="" name="f0myinputaffix" id="f0myinputaffix" ng-model="data.myinputaffix">
+      <input type="text" class="form-control" placeholder="" name="f0myinputaffix" id="f0myinputaffix" ng-model="data.myinputaffix" ng-minlength="3">
       <span class="input-group-addon">mysuffix</span>
     </div>
+
+    <span class="help-block" ng-show="f0.sent && f0.f0myinputaffix.$invalid">
+      <span ng-show="f0.f0myinputaffix.$error.minlength">El email debe tener al menos 3 caracteres</span>
+    </span>
 
   </div>
 

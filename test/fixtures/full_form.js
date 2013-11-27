@@ -27,6 +27,9 @@ module.exports = function() {
         kind: 'input',
         prefix: 'myprefix',
         suffix: 'mysuffix',
+        validations: [
+          ['minlength', 3, 'El email debe tener al menos 3 caracteres'],
+        ],
       },
 
       myselect: {
