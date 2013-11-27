@@ -422,6 +422,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 2013-11-27   v0.3.3   Fix validations generation. Fix angular error detection. Disable submit button if the form has errors. Less verbose output.
 * 2013-11-27   v0.3.2   Space in the submit field. Fix validator generation.
 * 2013-11-27   v0.3.1   Change args to the semantically correct attrs.
 * 2013-11-27   v0.3.0   Add repeated options to selects.
