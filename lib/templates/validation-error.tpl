@@ -1,1 +1,1 @@
-  <span ng-show="<%= name %><%= id %>.$error.<%= error %>"><%= msg %></span>
+  <span ng-show="<%= name %>.<%= name %><%= id %>.$error.<%= error %>"><%= msg %></span>

@@ -35,7 +35,7 @@ module.exports = function(grunt) {
         }
       }));
 
-      grunt.log.writeln('File "' + file.dest + '" created.');
+      grunt.verbose.writeln('File "' + file.dest + '" created.');
     });
   });
 
