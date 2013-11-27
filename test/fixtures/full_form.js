@@ -29,6 +29,7 @@ module.exports = function() {
         suffix: 'mysuffix',
         validations: [
           ['minlength', 3, 'El email debe tener al menos 3 caracteres'],
+          ['pattern', /^[a-z]$/, 'My pattern'],
         ],
       },
 
@@ -42,6 +43,9 @@ module.exports = function() {
           'myvalue1': 'mylabel1',
           'myvalue2': 'mylabel2',
         },
+        validations: [
+          ['custom:myexpr', 'My message'],
+        ],
       },
 
       myselectng: {

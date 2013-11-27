@@ -7,7 +7,16 @@ module.exports = function() {
       myinput: {
         kind: 'input',
         validations: [
-          ['minlength', 3, 'Required minlength'],
+          ['pattern', /[a-d]/, 'Required pattern'],
+          ['custom', 'foobar', 'Required custom'],
+          ['custom', 'foobaz', 'Required custom'],
+        ],
+      },
+
+      myinput2: {
+        kind: 'input',
+        validations: [
+          ['pattern', /[a-d]/, 'Required pattern'],
         ],
       },
     },

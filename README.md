@@ -450,6 +450,19 @@ Fields: `input`.
 
 Checks that at least a value it's specified.
 
+```js
+return {
+  fields: {
+    myinput: {
+      kind: 'input',
+      validations: [
+        ['required', 'required message'],
+      ],
+    },
+  },
+};
+```
+
 #### minlength
 Fields: `input`
 Arguments:
@@ -457,13 +470,69 @@ Arguments:
 
 Checks the content to see if it has at least X number of chars.
 
+```js
+return {
+  fields: {
+    myinput: {
+      kind: 'input',
+      validations: [
+        ['minlength:3', 'minlength message'],
+      ],
+    },
+  },
+};
+```
+
+#### pattern
+Fields: `input`
+Arguments:
+  1) The regexp to match against
+
+Checks the content to see if it matchs a regexp.
+
+```js
+return {
+  fields: {
+    myinput: {
+      kind: 'input',
+      validations: [
+        ['pattern', /^[a-zA-Z]$/, 'pattern message'],
+      ],
+    },
+  },
+};
+```
+
+#### custom
+Fields: `input`, `select`
+Arguments:
+  1) The expression to check for a truthy value.
+
+Checks a custom expression to show an error. If the expression evaluates to true
+and the field is not marked as dirty, it will show the error message.
+
+It could be a variable from scope that you change when submitting the form, for example.
+
+```js
+return {
+  fields: {
+    myinput: {
+      kind: 'input',
+      validations: [
+        ['custom:repeatedPage', 'custom message'],
+      ],
+    },
+  },
+};
+```
+
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 
 ## Release History
-* 2013-11-28   v0.4     Add prefix & suffix to inputs. Extended format for the validators. 
+* 2013-11-28   v0.4     Add prefix & suffix to inputs. Extended format for the validators. Add regexp & custom validation.
 * 2013-11-27   v0.3.3   Fix validations generation. Fix angular error detection. Disable submit button if the form has errors. Less verbose output.
 * 2013-11-27   v0.3.2   Space in the submit field. Fix validator generation.
 * 2013-11-27   v0.3.1   Change args to the semantically correct attrs.

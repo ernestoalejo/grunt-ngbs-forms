@@ -1,1 +1,1 @@
-  <span ng-show="<%= name %>.<%= name %><%= id %>.$error.<%= error %>"><%= msg %></span>
+  <% if (error) { %><span ng-show="<%= name %>.<%= name %><%= id %>.$error.<%= error %>"><%= msg %></span><% } %><% if (customError) { %><span ng-show="!<%= name %>.<%= name %><%= id %>.$dirty && (<%= customError %>)"><%= msg %></span><% } %>
