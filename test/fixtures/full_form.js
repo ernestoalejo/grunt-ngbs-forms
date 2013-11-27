@@ -23,6 +23,12 @@ module.exports = function() {
         ],
       },
 
+      myinputaffix: {
+        kind: 'input',
+        prefix: 'myprefix',
+        suffix: 'mysuffix',
+      },
+
       myselect: {
         kind: 'select',
       },

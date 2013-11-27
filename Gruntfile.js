@@ -63,6 +63,14 @@ module.exports = function(grunt) {
           'tmp/default_options_full.html': ['test/fixtures/full_form.html'],
         },
       },
+
+      testing: {
+        options: {
+        },
+        files: {
+          'tmp/testing.html': ['test/fixtures/testing.html'],
+        },
+      },
     },
 
     // Unit tests.
