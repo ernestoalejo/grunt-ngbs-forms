@@ -68,6 +68,11 @@ module.exports = function() {
         }
       },
 
+      mytextarea: {
+        kind: 'textarea',
+        rows: 7,
+      },
+
       mysubmit: {
         kind: 'submit',
         label: 'Send button',
