@@ -305,6 +305,99 @@ return {
 };
 ```
 
+### Textarea field
+Generates a textarea tag in the form.
+
+#### label
+Type: `String`
+Default: ``
+
+Label for this textarea. If empty it will not be created.
+
+```js
+return {
+  fields: {
+    mytextarea: {
+      kind: 'textarea',
+      label: 'My Own Label',
+    },
+  },
+};
+```
+
+#### placeholder
+Type: `String`
+Default: ``
+
+Placeholder for this textarea. Empty or not it will be generated in the output, so
+it's convenient to give always a value to this property for the generated code and
+for the user.
+
+```js
+return {
+  fields: {
+    mytextarea: {
+      kind: 'textarea',
+      placeholder: 'My Placeholder',
+    },
+  },
+};
+```
+
+#### attrs
+Type: `Object`
+Default: `{}`
+
+Additional arguments for the textarea tag. It's an object of *name: value* items.
+
+```js
+return {
+  fields: {
+    mytextarea: {
+      kind: 'textarea',
+      attrs: {
+        myname: 'myvalue',
+        myname2: 'myvalue2',
+      },
+    },
+  },
+};
+```
+
+#### validations
+Type: `Array`
+Default: `[]`
+
+See the validations section for more info.
+
+```js
+return {
+  fields: {
+    mytextarea: {
+      kind: 'textarea',
+      validations: [ ... ],
+    },
+  },
+};
+```
+
+#### rows
+Type: `Integer`
+Default: `0`
+
+If present and not zero it will adjust the number of textarea visible rows.
+
+```js
+return {
+  fields: {
+    mytextarea: {
+      kind: 'textarea',
+      rows: 3,
+    },
+  },
+};
+```
+
 ### Submit field
 Generates submit button in the form.
 
@@ -446,7 +539,7 @@ return {
 ```
 
 #### required
-Fields: `input`.
+Fields: `input`, `textarea`
 
 Checks that at least a value it's specified.
 
@@ -464,7 +557,7 @@ return {
 ```
 
 #### minlength
-Fields: `input`
+Fields: `input`, `textarea`
 Arguments:
   1) The length to check
 
@@ -484,7 +577,7 @@ return {
 ```
 
 #### pattern
-Fields: `input`
+Fields: `input`, `textarea`
 Arguments:
   1) The regexp to match against
 
@@ -504,7 +597,7 @@ return {
 ```
 
 #### custom
-Fields: `input`, `select`
+Fields: `input`, `select`, `textarea`
 Arguments:
   1) The expression to check for a truthy value.
 
@@ -532,6 +625,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 2013-11-28   v0.5     Textarea field.
 * 2013-11-28   v0.4     Add prefix & suffix to inputs. Extended format for the validators. Add regexp & custom validation.
 * 2013-11-27   v0.3.3   Fix validations generation. Fix angular error detection. Disable submit button if the form has errors. Less verbose output.
 * 2013-11-27   v0.3.2   Space in the submit field. Fix validator generation.
