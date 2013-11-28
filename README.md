@@ -625,6 +625,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 2013-11-28   v0.5.2   Fix typo in last commit.
 * 2013-11-28   v0.5.1   Show errors when the field is not dirty only.
 * 2013-11-28   v0.5.0   Textarea field.
 * 2013-11-28   v0.4.1   Add prefix & suffix to inputs. Extended format for the validators. Add regexp & custom validation.
