@@ -89,11 +89,15 @@
 
   </div>
 
-  <p>&nbsp;</p>
-  <button type="submit" class="btn btn-primary" ng-disabled="f0.sent && !f0.$valid">Send button</button>
+  <div>
+    <p>&nbsp;</p>
+    <button type="submit" class="btn btn-primary" ng-disabled="f0.sent && !f0.$valid">Send button</button>
+  </div>
 
-  <p>&nbsp;</p>
-  <button type="submit" class="btn btn-primary" ng-disabled="f0.sent && !f0.$valid" foo="bar">Send button</button>
+  <div foo="bar">
+    <p>&nbsp;</p>
+    <button type="submit" class="btn btn-primary" ng-disabled="f0.sent && !f0.$valid" baz="qux">Send button</button>
+  </div>
 
 
 </fieldset>

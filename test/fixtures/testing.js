@@ -7,9 +7,16 @@ module.exports = function() {
       submit: {
         kind: 'submit',
         label: 'Testing',
+        containerAttrs: {
+          bar: 'baz',
+        },
         attrs: {
           test: 'foo',
         },
+      },
+      submit2: {
+        kind: 'submit',
+        label: 'Testing',
       },
     },
   };

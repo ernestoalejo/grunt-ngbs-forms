@@ -81,8 +81,11 @@ module.exports = function() {
       mysubmitattrs: {
         kind: 'submit',
         label: 'Send button',
-        attrs: {
+        containerAttrs: {
           foo: 'bar',
+        },
+        attrs: {
+          baz: 'qux',
         }
       },
     },
