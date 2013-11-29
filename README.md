@@ -625,6 +625,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 2013-11-28   v0.5.5   Custom validators fix.
 * 2013-11-28   v0.5.4   Typo.
 * 2013-11-28   v0.5.3   Another validation fix.
 * 2013-11-28   v0.5.2   Fix typo in last commit.

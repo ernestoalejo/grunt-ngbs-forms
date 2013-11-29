@@ -13,12 +13,12 @@
   </div>
 
 
-  <div class="form-group" ng-class="{'has-error': f0.sent && (f0.f0myinputv.$invalid || false)}">
+  <div class="form-group" ng-class="{'has-error': f0.sent && (f0.f0myinputv.$invalid)}">
     <label for="f0myinputv" class="control-label">Email</label>
 
     <input type="email" class="form-control" placeholder="test@example" name="f0myinputv" id="f0myinputv" ng-model="data.myinputv" myarg1="myvalue1" myarg2="myvalue2" required="" ng-minlength="3">
 
-    <span class="help-block" ng-show="f0.sent && (f0.f0myinputv.$invalid || false)">
+    <span class="help-block" ng-show="f0.sent && (f0.f0myinputv.$invalid)">
       <span ng-show="f0.f0myinputv.$error.required">El email es obligatorio</span>
       <span ng-show="f0.f0myinputv.$error.minlength">El email debe tener al menos 3 caracteres</span>
     </span>
@@ -26,7 +26,7 @@
   </div>
 
 
-  <div class="form-group" ng-class="{'has-error': f0.sent && (f0.f0myinputaffix.$invalid || false)}">
+  <div class="form-group" ng-class="{'has-error': f0.sent && (f0.f0myinputaffix.$invalid)}">
 
     <div class="input-group">
       <span class="input-group-addon">myprefix</span>
@@ -34,7 +34,7 @@
       <span class="input-group-addon">mysuffix</span>
     </div>
 
-    <span class="help-block" ng-show="f0.sent && (f0.f0myinputaffix.$invalid || false)">
+    <span class="help-block" ng-show="f0.sent && (f0.f0myinputaffix.$invalid)">
       <span ng-show="f0.f0myinputaffix.$error.minlength">El email debe tener al menos 3 caracteres</span>
       <span ng-show="f0.f0myinputaffix.$error.pattern">My pattern</span>
     </span>
@@ -50,15 +50,15 @@
   </div>
 
 
-  <div class="form-group" ng-class="{'has-error': f0.sent && (f0.f0myselectoptions.$invalid || (myexpr))}">
+  <div class="form-group" ng-class="{'has-error': f0.sent && (f0.f0myselectoptions.$invalid || (!f0.f0myselectoptions.$dirty && ((myexpr))))}">
 
     <select class="form-control" name="f0myselectoptions" id="f0myselectoptions" ng-model="data.myselectoptions">
       <option value="myvalue1">mylabel1</option>
       <option value="myvalue2">mylabel2</option>
     </select>
 
-    <span class="help-block" ng-show="f0.sent && (f0.f0myselectoptions.$invalid || (myexpr))">
-      <span ng-show="!f0.f0myselectoptions.$dirty && (myexpr)">My message</span>
+    <span class="help-block" ng-show="f0.sent && (f0.f0myselectoptions.$invalid || (!f0.f0myselectoptions.$dirty && ((myexpr))))">
+      <span ng-show="!f0.f0myselectoptions.$dirty && f0.f0myselectoptions.$valid && (myexpr)">My message</span>
     </span>
 
   </div>
