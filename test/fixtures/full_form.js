@@ -76,7 +76,15 @@ module.exports = function() {
       mysubmit: {
         kind: 'submit',
         label: 'Send button',
-      }
+      },
+
+      mysubmitattrs: {
+        kind: 'submit',
+        label: 'Send button',
+        attrs: {
+          foo: 'bar',
+        }
+      },
     },
   };
 };

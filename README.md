@@ -418,6 +418,26 @@ return {
 };
 ```
 
+#### attrs
+Type: `Object`
+Default: `{}`
+
+Additional arguments for the button tag. It's an object of *name: value* items.
+
+```js
+return {
+  fields: {
+    mysubmit: {
+      kind: 'submit',
+      attrs: {
+        myname: 'myvalue',
+        myname2: 'myvalue2',
+      },
+    },
+  },
+};
+```
+
 ### Select field
 Generates a select tag in the form.
 
@@ -625,6 +645,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 2013-11-29   v0.6.0   Submit buttons can have attributes now.
 * 2013-11-28   v0.5.5   Custom validators fix.
 * 2013-11-28   v0.5.4   Typo.
 * 2013-11-28   v0.5.3   Another validation fix.
