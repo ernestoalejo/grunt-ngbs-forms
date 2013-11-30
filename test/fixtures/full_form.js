@@ -70,7 +70,14 @@ module.exports = function() {
 
       mytextarea: {
         kind: 'textarea',
+        label: 'My textarea',
         rows: 7,
+      },
+
+      mystatic: {
+        kind: 'static',
+        label: 'My Static',
+        content: '<p>static content</p>',
       },
 
       mysubmit: {

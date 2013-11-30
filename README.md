@@ -545,6 +545,44 @@ return {
 };
 ```
 
+### Static field
+Generates a static text field in the form.
+
+#### label
+Type: `String`
+Default: ``
+
+Label for this field. If empty it will not be created.
+
+```js
+return {
+  fields: {
+    myselect: {
+      kind: 'static',
+      label: 'My Own Label',
+    },
+  },
+};
+```
+
+
+#### content
+Type: `String`
+Default: ``
+
+Content of the field.
+
+```js
+return {
+  fields: {
+    myselect: {
+      kind: 'static',
+      content: 'content of the field',
+    },
+  },
+};
+```
+
 
 ### Validations
 Validations are arrays of *[name, message]* pairs with the name of the validation
@@ -665,6 +703,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 2013-11-30   v0.7.0   Add static fields.
 * 2013-11-29   v0.6.1   Add container attributes to submit fields.
 * 2013-11-29   v0.6.0   Submit buttons can have attributes now.
 * 2013-11-28   v0.5.5   Custom validators fix.
