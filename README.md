@@ -166,15 +166,67 @@ the form) and an object containing the info of that field (see field info object
 
 ### Field info object
 Fields objects, associated to an id (see form info objects), can have several properties
-customizing aspects of the field. There's one which is common to all of them, and always
-required (`kind`). The rest are specific to which kind you choose.
+customizing aspects of the field. There are several which are common to all of them, one
+of them always required (`kind`). The rest are specific to which kind you choose.
 
 #### kind
 Type: `String`
 One of: `input`, `submit`, `select`
 
+```js
+return {
+  fields: {
+    myinput: {
+      kind: 'input',
+    },
+  },
+};
+```
+
 The kind of this form field.
 
+#### id
+Type: `String`
+Default: ``
+
+The id for this field. If present it will replace the generated one. It's useful
+mainly to forms inside ng-repeats, where the label should point to a field with
+a index like "myid{{ $index }}".
+
+```js
+return {
+  fields: {
+    myinput: {
+      kind: 'input',
+      id: 'myid{{ $index }}',
+    },
+  },
+};
+```
+
+#### name
+Type: `String`
+Default: ``
+
+The name for this field. If not present it will default to the key of the object.
+You should prefer **always** to change directly the key of the object because it's
+shorter and have a concise meaning.
+
+```js
+return {
+  fields: {
+    myinput: {
+      kind: 'input',
+      name: 'myinput-withdash',
+    },
+
+    // Preferred
+    'myinput-withdash': {
+      kind: 'input',
+    }
+  },
+};
+```
 
 ### Input field
 Generates an input tag in the form.
@@ -703,6 +755,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 2013-12-01   v0.8.0   You can now specify the name & id of individual fields.
 * 2013-12-01   v0.7.3   The form definition can specify the protected name.
 * 2013-12-01   v0.7.2   Protect form name in the ng-submit attribute.
 * 2013-11-30   v0.7.1   Fix field referencing to allow any char (e.g. points) in the ids of the field.

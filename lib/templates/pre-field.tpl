@@ -1,3 +1,3 @@
 
-<div class="form-group"<% if(hasValidations) {%> ng-class="{'has-error': <%= name %>.sent && (<%= name %>['<%= name %><%= id %>'].$invalid<% if (custom) { %> || (!<%= name %>['<%= name %><%= id %>'].$dirty && (<%= custom %>))<% } %>)}"<% } %>><% if(label) { %>
-  <label for="<%= name %><%= id %>" class="control-label"><%= label %></label><% } %>
+<div class="form-group"<% if(hasValidations) {%> ng-class="{'has-error': <%= formName %>.sent && (<%= formName %>['<%= name %>'].$invalid<% if (custom) { %> || (!<%= formName %>['<%= name %>'].$dirty && (<%= custom %>))<% } %>)}"<% } %>><% if(label) { %>
+  <label for="<%= id %>" class="control-label"><%= label %></label><% } %>

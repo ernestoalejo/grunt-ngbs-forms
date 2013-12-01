@@ -33,6 +33,15 @@ module.exports = function() {
         ],
       },
 
+      myinputmyid: {
+        kind: 'input',
+        label: 'myid',
+        id: 'myidtest',
+        validations: [
+          ['required', 'required validation with the name'],
+        ],
+      },
+
       myselect: {
         kind: 'select',
       },

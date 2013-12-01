@@ -1,1 +1,1 @@
-<span class="help-block" ng-show="<%= name %>.sent && (<%= name %>['<%= name %><%= id %>'].$invalid<% if (custom) { %> || (!<%= name %>['<%= name %><%= id %>'].$dirty && (<%= custom %>))<% } %>)">
+<span class="help-block" ng-show="<%= formName %>.sent && (<%= formName %>['<%= name %>'].$invalid<% if (custom) { %> || (!<%= formName %>['<%= name %>'].$dirty && (<%= custom %>))<% } %>)">

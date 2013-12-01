@@ -1,1 +1,1 @@
-  <% if (error) { %><span ng-show="<%= name %>['<%= name %><%= id %>'].$error.<%= error %>"><%= msg %></span><% } %><% if (customError) { %><span ng-show="!<%= name %>['<%= name %><%= id %>'].$dirty && <%= name %>['<%= name %><%= id %>'].$valid && (<%= customError %>)"><%= msg %></span><% } %>
+  <% if (error) { %><span ng-show="<%= formName %>['<%= name %>'].$error.<%= error %>"><%= msg %></span><% } %><% if (customError) { %><span ng-show="!<%= formName %>['<%= name %>'].$dirty && <%= formName %>['<%= name %>'].$valid && (<%= customError %>)"><%= msg %></span><% } %>

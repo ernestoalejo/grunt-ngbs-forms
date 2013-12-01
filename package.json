@@ -43,5 +43,8 @@
     "angular",
     "form",
     "generator"
-  ]
+  ],
+  "dependencies": {
+    "lodash": "~2.4.0"
+  }
 }

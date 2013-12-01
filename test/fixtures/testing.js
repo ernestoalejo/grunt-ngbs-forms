@@ -5,9 +5,9 @@ module.exports = function() {
   return {
     fields: {
       statictext: {
-        kind: 'static',
+        kind: 'input',
         label: 'Testing',
-        content: 'mycontent',
+        id: 'testt',
       },
     },
   };
