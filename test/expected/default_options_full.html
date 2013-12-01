@@ -5,13 +5,11 @@
 <form role="form" name="f0" novalidate ng-init="f0.sent = false;" ng-submit="f0.sent = true; f0.$setPristine(); f0.$valid && submit();">
 <fieldset>
 
-
   <div class="form-group">
 
     <input type="text" placeholder="" class="form-control" name="f0myinput" id="f0myinput" ng-model="data.myinput">
 
   </div>
-
 
   <div class="form-group" ng-class="{'has-error': f0.sent && (f0['f0myinputv'].$invalid)}">
     <label for="f0myinputv" class="control-label">Email</label>
@@ -24,7 +22,6 @@
     </span>
 
   </div>
-
 
   <div class="form-group" ng-class="{'has-error': f0.sent && (f0['f0myinputaffix'].$invalid)}">
 
@@ -41,7 +38,6 @@
 
   </div>
 
-
   <div class="form-group" ng-class="{'has-error': f0.sent && (f0['f0myinputmyid'].$invalid)}">
     <label for="myidtest" class="control-label">myid</label>
 
@@ -53,14 +49,12 @@
 
   </div>
 
-
   <div class="form-group">
 
     <select class="form-control" name="f0myselect" id="f0myselect" ng-model="data.myselect">
     </select>
 
   </div>
-
 
   <div class="form-group" ng-class="{'has-error': f0.sent && (f0['f0myselectoptions'].$invalid || (!f0['f0myselectoptions'].$dirty && ((myexpr))))}">
 
@@ -75,7 +69,6 @@
 
   </div>
 
-
   <div class="form-group">
     <label for="f0myselectng" class="control-label">Select label</label>
 
@@ -83,7 +76,6 @@
     </select>
 
   </div>
-
 
   <div class="form-group">
 
@@ -94,14 +86,12 @@
 
   </div>
 
-
   <div class="form-group">
     <label for="f0mytextarea" class="control-label">My textarea</label>
 
     <textarea placeholder="" class="form-control" name="f0mytextarea" id="f0mytextarea" ng-model="data.mytextarea" rows="7"></textarea>
 
   </div>
-
 
   <div class="form-group">
     <label for="f0mystatic" class="control-label">My Static</label>
@@ -119,7 +109,6 @@
     <p>&nbsp;</p>
     <button type="submit" class="btn btn-primary" ng-disabled="f0.sent && !f0.$valid" baz="qux">Send button</button>
   </div>
-
 
 </fieldset>
 </form>

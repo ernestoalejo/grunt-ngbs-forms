@@ -3,6 +3,7 @@
 
 module.exports = function() {
   return {
+    noFieldset: true,
     fields: {
       statictext: {
         kind: 'input',

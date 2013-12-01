@@ -1,3 +1,2 @@
-
-</fieldset>
-</form>
+<% if (!noFieldset) { %></fieldset>
+<% } %></form>

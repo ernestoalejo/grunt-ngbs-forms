@@ -157,6 +157,21 @@ return {
 ```
 
 
+#### noFieldset
+Type: `Boolean`
+Default: `false`
+
+If truthy the form will not be wrapped with a fieldset tag. It can help with floating
+issues of other items in the page that have to "enter" the form space.
+
+```js
+return {
+  submit: 'myfunc',
+  noFieldset: true,
+};
+```
+
+
 #### fields
 Type: `Object`
 
@@ -755,6 +770,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 2013-12-01   v0.9.0   Add option to avoid wrapping the form in a fieldset tag.
 * 2013-12-01   v0.8.0   You can now specify the name & id of individual fields.
 * 2013-12-01   v0.7.3   The form definition can specify the protected name.
 * 2013-12-01   v0.7.2   Protect form name in the ng-submit attribute.
