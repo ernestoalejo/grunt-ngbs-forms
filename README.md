@@ -703,6 +703,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 2013-12-01   v0.7.2   Protect form name in the ng-submit attribute.
 * 2013-11-30   v0.7.1   Fix field referencing to allow any char (e.g. points) in the ids of the field.
 * 2013-11-30   v0.7.0   Add static fields.
 * 2013-11-29   v0.6.1   Add container attributes to submit fields.
