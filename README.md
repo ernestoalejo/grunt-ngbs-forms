@@ -812,6 +812,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 2013-12-03   v0.10.1  Fix problems parsing a zero value in minvalue validation.
 * 2013-12-03   v0.10.0  Add integer & minvalue validations.
 * 2013-12-01   v0.9.0   Add option to avoid wrapping the form in a fieldset tag.
 * 2013-12-01   v0.8.0   You can now specify the name & id of individual fields.

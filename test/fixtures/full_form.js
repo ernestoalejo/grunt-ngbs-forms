@@ -51,6 +51,15 @@ module.exports = function() {
         ],
       },
 
+      myintzero: {
+        kind: 'input',
+        type: 'number',
+        validations: [
+          ['integer', 'integer required'],
+          ['minvalue:0', 'at least 0 required'],
+        ],
+      },
+
       myselect: {
         kind: 'select',
       },

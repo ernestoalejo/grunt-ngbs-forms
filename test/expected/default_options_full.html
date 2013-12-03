@@ -60,6 +60,17 @@
 
   </div>
 
+  <div class="form-group" ng-class="{'has-error': f0.sent && (f0['f0myintzero'].$invalid)}">
+
+    <input type="number" placeholder="" class="form-control" name="f0myintzero" id="f0myintzero" ng-model="data.myintzero" min="0">
+
+    <span class="help-block" ng-show="f0.sent && (f0['f0myintzero'].$invalid)">
+      <span ng-show="f0['f0myintzero'].$error.number">integer required</span>
+      <span ng-show="f0['f0myintzero'].$error.min">at least 0 required</span>
+    </span>
+
+  </div>
+
   <div class="form-group">
 
     <select class="form-control" name="f0myselect" id="f0myselect" ng-model="data.myselect">
