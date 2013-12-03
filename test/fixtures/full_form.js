@@ -42,6 +42,15 @@ module.exports = function() {
         ],
       },
 
+      myint: {
+        kind: 'input',
+        type: 'number',
+        validations: [
+          ['integer', 'integer required'],
+          ['minvalue:10', 'at least 10 required'],
+        ],
+      },
+
       myselect: {
         kind: 'select',
       },

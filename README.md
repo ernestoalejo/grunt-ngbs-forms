@@ -764,12 +764,55 @@ return {
 };
 ```
 
+#### integer
+Fields: `input`
+
+Adds a message if the input value is not a valid integer. The input type
+should be set to number for this to work (see example).
+
+```js
+return {
+  fields: {
+    myinput: {
+      kind: 'input',
+      type: 'number'
+      validations: [
+        ['integer', 'integer required'],
+      ],
+    },
+  },
+};
+```
+
+#### minvalue
+Fields: `input`
+Arguments:
+  1) The value to check (inclusive)
+
+Checks the integer to see if it's equal or greater than the value. It requires
+an input with the number type (see example).
+
+```js
+return {
+  fields: {
+    myinput: {
+      kind: 'input',
+      type: 'number',
+      validations: [
+        ['minvalue:3', 'the integer should be 3 or more'],
+      ],
+    },
+  },
+};
+```
+
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 
 ## Release History
+* 2013-12-03   v0.10.0  Add integer & minvalue validations.
 * 2013-12-01   v0.9.0   Add option to avoid wrapping the form in a fieldset tag.
 * 2013-12-01   v0.8.0   You can now specify the name & id of individual fields.
 * 2013-12-01   v0.7.3   The form definition can specify the protected name.
