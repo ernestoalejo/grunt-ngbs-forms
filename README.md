@@ -319,6 +319,26 @@ return {
 };
 ```
 
+#### containerAttrs
+Type: `Object`
+Default: `{}`
+
+Additional arguments for the field container. It's an object of *name: value* items.
+
+```js
+return {
+  fields: {
+    myinput: {
+      kind: 'input',
+      containerAttrs: {
+        myname: 'myvalue',
+        myname2: 'myvalue2',
+      },
+    },
+  },
+};
+```
+
 #### validations
 Type: `Array`
 Default: `[]`
@@ -515,7 +535,7 @@ Additional arguments for the field container. It's an object of *name: value* it
 return {
   fields: {
     myinput: {
-      kind: 'input',
+      kind: 'submit',
       containerAttrs: {
         myname: 'myvalue',
         myname2: 'myvalue2',
@@ -876,7 +896,8 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
-* 2013-12-03   v0.11.0  Add date validations (and min & max for date values).
+* 2013-12-04   v0.12.0  Add container attributes to inputs.
+* 2013-12-04   v0.11.0  Add date validations (and min & max for date values).
 * 2013-12-03   v0.10.1  Fix problems parsing a zero value in minvalue validation.
 * 2013-12-03   v0.10.0  Add integer & minvalue validations.
 * 2013-12-01   v0.9.0   Add option to avoid wrapping the form in a fieldset tag.
