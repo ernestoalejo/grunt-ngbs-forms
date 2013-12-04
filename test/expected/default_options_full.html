@@ -7,14 +7,18 @@
 
   <div class="form-group">
 
-    <input type="text" placeholder="" class="form-control" name="f0myinput" id="f0myinput" ng-model="data.myinput">
+    <div>
+      <input type="text" placeholder="" class="form-control" name="f0myinput" id="f0myinput" ng-model="data.myinput">
+    </div>
 
   </div>
 
   <div class="form-group" ng-class="{'has-error': f0.sent && (f0['f0myinputv'].$invalid)}">
     <label for="f0myinputv" class="control-label">Email</label>
 
-    <input type="email" placeholder="test@example" class="form-control" name="f0myinputv" id="f0myinputv" ng-model="data.myinputv" myarg1="myvalue1" myarg2="myvalue2" required="" ng-minlength="3">
+    <div>
+      <input type="email" placeholder="test@example" class="form-control" name="f0myinputv" id="f0myinputv" ng-model="data.myinputv" myarg1="myvalue1" myarg2="myvalue2" required="" ng-minlength="3">
+    </div>
 
     <span class="help-block" ng-show="f0.sent && (f0['f0myinputv'].$invalid)">
       <span ng-show="f0['f0myinputv'].$error.required">El email es obligatorio</span>
@@ -25,10 +29,12 @@
 
   <div class="form-group" ng-class="{'has-error': f0.sent && (f0['f0myinputaffix'].$invalid)}">
 
-    <div class="input-group">
-      <span class="input-group-addon">myprefix</span>
-      <input type="text" placeholder="" class="form-control" name="f0myinputaffix" id="f0myinputaffix" ng-model="data.myinputaffix" ng-minlength="3" ng-pattern="/^[a-z]$/">
-      <span class="input-group-addon">mysuffix</span>
+    <div>
+      <div class="input-group">
+        <span class="input-group-addon">myprefix</span>
+        <input type="text" placeholder="" class="form-control" name="f0myinputaffix" id="f0myinputaffix" ng-model="data.myinputaffix" ng-minlength="3" ng-pattern="/^[a-z]$/">
+        <span class="input-group-addon">mysuffix</span>
+      </div>
     </div>
 
     <span class="help-block" ng-show="f0.sent && (f0['f0myinputaffix'].$invalid)">
@@ -41,7 +47,9 @@
   <div class="form-group" ng-class="{'has-error': f0.sent && (f0['f0myinputmyid'].$invalid)}">
     <label for="myidtest" class="control-label">myid</label>
 
-    <input type="text" placeholder="" class="form-control" name="f0myinputmyid" id="myidtest" ng-model="data.myinputmyid" required="">
+    <div>
+      <input type="text" placeholder="" class="form-control" name="f0myinputmyid" id="myidtest" ng-model="data.myinputmyid" required="">
+    </div>
 
     <span class="help-block" ng-show="f0.sent && (f0['f0myinputmyid'].$invalid)">
       <span ng-show="f0['f0myinputmyid'].$error.required">required validation with the name</span>
@@ -51,7 +59,9 @@
 
   <div class="form-group" ng-class="{'has-error': f0.sent && (f0['f0myint'].$invalid)}">
 
-    <input type="number" placeholder="" class="form-control" name="f0myint" id="f0myint" ng-model="data.myint" min="10">
+    <div>
+      <input type="number" placeholder="" class="form-control" name="f0myint" id="f0myint" ng-model="data.myint" min="10">
+    </div>
 
     <span class="help-block" ng-show="f0.sent && (f0['f0myint'].$invalid)">
       <span ng-show="f0['f0myint'].$error.number">integer required</span>
@@ -62,7 +72,9 @@
 
   <div class="form-group" ng-class="{'has-error': f0.sent && (f0['f0myintzero'].$invalid)}">
 
-    <input type="number" placeholder="" class="form-control" name="f0myintzero" id="f0myintzero" ng-model="data.myintzero" min="0">
+    <div>
+      <input type="number" placeholder="" class="form-control" name="f0myintzero" id="f0myintzero" ng-model="data.myintzero" min="0">
+    </div>
 
     <span class="help-block" ng-show="f0.sent && (f0['f0myintzero'].$invalid)">
       <span ng-show="f0['f0myintzero'].$error.number">integer required</span>
@@ -125,7 +137,9 @@
   <div class="form-group" ng-class="{'has-error': f0.sent && (f0['f0datepicker'].$invalid)}">
     <label for="f0datepicker" class="control-label">Datepicker field</label>
 
-    <input type="text" placeholder="DD/MM/AAAA" class="form-control" name="f0datepicker" id="f0datepicker" ng-model="data.datepicker" datepicker-popup="dd/MM/yyyy" datepicker-manual="" datepicker-options="datepickerOptions" required="" min="minDate" min-date-value="minDate">
+    <div>
+      <input type="text" placeholder="DD/MM/AAAA" class="form-control" name="f0datepicker" id="f0datepicker" ng-model="data.datepicker" datepicker-popup="dd/MM/yyyy" datepicker-manual="" datepicker-options="datepickerOptions" required="" min="minDate" min-date-value="minDate">
+    </div>
 
     <span class="help-block" ng-show="f0.sent && (f0['f0datepicker'].$invalid)">
       <span ng-show="f0['f0datepicker'].$error.required">La fecha de finalización es obligatoria en formato DD/MM/AAAA</span>
