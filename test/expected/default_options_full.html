@@ -122,6 +122,19 @@
 
   </div>
 
+  <div class="form-group" ng-class="{'has-error': f0.sent && (f0['f0datepicker'].$invalid)}">
+    <label for="f0datepicker" class="control-label">Datepicker field</label>
+
+    <input type="text" placeholder="DD/MM/AAAA" class="form-control" name="f0datepicker" id="f0datepicker" ng-model="data.datepicker" datepicker-popup="dd/MM/yyyy" datepicker-manual="" datepicker-options="datepickerOptions" required="" min="minDate" min-date-value="minDate">
+
+    <span class="help-block" ng-show="f0.sent && (f0['f0datepicker'].$invalid)">
+      <span ng-show="f0['f0datepicker'].$error.required">La fecha de finalización es obligatoria en formato DD/MM/AAAA</span>
+      <span ng-show="f0['f0datepicker'].$error.date">La fecha debe tener un formato válido DD/MM/AAAA</span>
+      <span ng-show="f0['f0datepicker'].$error.min">La fecha debe corresponder a hoy, o un día posterior</span>
+    </span>
+
+  </div>
+
   <div>
     <p>&nbsp;</p>
     <button type="submit" class="btn btn-primary" ng-disabled="f0.sent && !f0.$valid">Send button</button>

@@ -806,12 +806,77 @@ return {
 };
 ```
 
+#### date
+Fields: `input`
+
+Adds a message if the input value is not a valid date. The input type
+should be set to text and have datepicker directives (that transform strings
+to dates) for this to work.
+
+```js
+return {
+  fields: {
+    myinput: {
+      kind: 'input',
+      validations: [
+        ['date', 'date required'],
+      ],
+    },
+  },
+};
+```
+
+#### mindate
+Fields: `input`
+Arguments:
+  1) The value to check
+
+Adds min & min-date attributes to the input tag. It requires some kind of directive
+to validate them.
+The value can be a scoped variable.
+
+```js
+return {
+  fields: {
+    myinput: {
+      kind: 'input',
+      validations: [
+        ['mindate:minDate', 'min date required'],
+      ],
+    },
+  },
+};
+```
+
+#### maxDate
+Fields: `input`
+Arguments:
+  1) The value to check
+
+Adds max & max-date attributes to the input tag. It requires some kind of directive
+to validate them.
+The value can be a scoped variable.
+
+```js
+return {
+  fields: {
+    myinput: {
+      kind: 'input',
+      validations: [
+        ['maxDate:maxDate', 'max date required'],
+      ],
+    },
+  },
+};
+```
+
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 
 ## Release History
+* 2013-12-03   v0.11.0  Add date validations (and min & max for date values).
 * 2013-12-03   v0.10.1  Fix problems parsing a zero value in minvalue validation.
 * 2013-12-03   v0.10.0  Add integer & minvalue validations.
 * 2013-12-01   v0.9.0   Add option to avoid wrapping the form in a fieldset tag.
