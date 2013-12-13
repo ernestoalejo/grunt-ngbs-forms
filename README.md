@@ -896,6 +896,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 2013-12-13   v0.12.2  Switch off autofill in forms.
 * 2013-12-04   v0.12.1  Fix container attributes.
 * 2013-12-04   v0.12.0  Add container attributes to inputs.
 * 2013-12-04   v0.11.0  Add date validations (and min & max for date values).
