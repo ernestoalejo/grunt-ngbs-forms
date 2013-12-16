@@ -20,6 +20,7 @@ module.exports = function() {
         validations: [
           ['required', 'El email es obligatorio'],
           ['minlength:3', 'El email debe tener al menos 3 caracteres'],
+          ['email', 'required email'],
         ],
       },
 
