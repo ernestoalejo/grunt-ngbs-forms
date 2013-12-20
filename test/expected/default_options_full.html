@@ -17,12 +17,13 @@
     <label for="f0myinputv" class="control-label">Email</label>
 
     <div>
-      <input type="email" placeholder="test@example" class="form-control" name="f0myinputv" id="f0myinputv" ng-model="data.myinputv" myarg1="myvalue1" myarg2="myvalue2" required="" ng-minlength="3">
+      <input type="email" placeholder="test@example" class="form-control" name="f0myinputv" id="f0myinputv" ng-model="data.myinputv" myarg1="myvalue1" myarg2="myvalue2" required="" ng-minlength="3" ng-maxlength="3">
     </div>
 
     <span class="help-block" ng-show="f0.sent && (f0['f0myinputv'].$invalid)">
       <span ng-show="f0['f0myinputv'].$error.required">El email es obligatorio</span>
       <span ng-show="f0['f0myinputv'].$error.minlength">El email debe tener al menos 3 caracteres</span>
+      <span ng-show="f0['f0myinputv'].$error.maxlength">El email debe tener como mucho 3 caracteres</span>
       <span ng-show="f0['f0myinputv'].$error.email">required email</span>
     </span>
 

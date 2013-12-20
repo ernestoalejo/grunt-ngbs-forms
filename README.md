@@ -795,6 +795,26 @@ return {
 };
 ```
 
+#### maxlength
+Fields: `input`, `textarea`
+Arguments:
+  1) The length to check
+
+Checks the content to see if it has X number of chars maximum.
+
+```js
+return {
+  fields: {
+    myinput: {
+      kind: 'input',
+      validations: [
+        ['maxlength:3', 'maxlength message'],
+      ],
+    },
+  },
+};
+```
+
 #### pattern
 Fields: `input`, `textarea`
 Arguments:
@@ -950,6 +970,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 2013-12-20   v0.15.0  Add maxlength validation.
 * 2013-12-20   v0.14.0  Add additional content to submit fields. Add static field without any kind of wrapping.
 * 2013-12-16   v0.13.0  Add email validation.
 * 2013-12-13   v0.12.2  Switch off autofill in forms.
