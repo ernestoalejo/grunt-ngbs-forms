@@ -124,6 +124,12 @@ module.exports = function() {
         ],
       },
 
+      mystaticnowrapper: {
+        kind: 'staticNoWrapper',
+        label: 'My Static No Wrapper',
+        content: '<p>static no wrapper content</p>',
+      },
+
       mysubmit: {
         kind: 'submit',
         label: 'Send button',
