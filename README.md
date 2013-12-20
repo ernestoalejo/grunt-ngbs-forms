@@ -534,7 +534,7 @@ Additional arguments for the field container. It's an object of *name: value* it
 ```js
 return {
   fields: {
-    myinput: {
+    mysubmit: {
       kind: 'submit',
       containerAttrs: {
         myname: 'myvalue',
@@ -719,6 +719,131 @@ return {
     staticend: {
       kind: 'staticNoWrapper',
       content: '</div>',
+    },
+  },
+};
+```
+
+
+### Checkbox field
+Generates a checkbox input field in the form.
+
+#### label
+Type: `String`
+Default: ``
+
+Label for the checkbox input.
+
+```js
+return {
+  fields: {
+    myinput: {
+      kind: 'input',
+      label: 'Remember me',
+    },
+  },
+};
+```
+
+#### attrs
+Type: `Object`
+Default: `{}`
+
+Additional arguments for the input tag. It's an object of *name: value* items.
+
+```js
+return {
+  fields: {
+    mycheckbox: {
+      kind: 'checkbox',
+      attrs: {
+        myname: 'myvalue',
+        myname2: 'myvalue2',
+      },
+    },
+  },
+};
+```
+
+#### containerAttrs
+Type: `Object`
+Default: `{}`
+
+Additional arguments for the field container. It's an object of *name: value* items.
+
+```js
+return {
+  fields: {
+    mycheckbox: {
+      kind: 'checkbox',
+      containerAttrs: {
+        myname: 'myvalue',
+        myname2: 'myvalue2',
+      },
+    },
+  },
+};
+```
+
+
+### Radio field
+Generates a bunch of radio tags in the form.
+
+#### attrs
+Type: `Object`
+Default: `{}`
+
+Additional arguments for the input tag. It's an object of *name: value* items.
+
+```js
+return {
+  fields: {
+    myradio: {
+      kind: 'radio',
+      attrs: {
+        myname: 'myvalue',
+        myname2: 'myvalue2',
+      },
+    },
+  },
+};
+```
+
+#### options
+Type: `Object`
+Default: `{}`
+
+Options for the radios. It should be pairs of *value: label* items.
+
+```js
+return {
+  fields: {
+    myradio: {
+      kind: 'radio',
+      options: {
+        myvalue1: 'My Label 1',
+        'my-value-2': 'My Label 2',
+      },
+    },
+  },
+};
+```
+
+#### containerAttrs
+Type: `Object`
+Default: `{}`
+
+Additional arguments for the field container. It's an object of *name: value* items.
+
+```js
+return {
+  fields: {
+    myradio: {
+      kind: 'radio',
+      containerAttrs: {
+        myname: 'myvalue',
+        myname2: 'myvalue2',
+      },
     },
   },
 };
@@ -970,6 +1095,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 2013-12-20   v0.16.0  Add checkbox & radio kind types.
 * 2013-12-20   v0.15.0  Add maxlength validation.
 * 2013-12-20   v0.14.0  Add additional content to submit fields. Add static field without any kind of wrapping.
 * 2013-12-16   v0.13.0  Add email validation.

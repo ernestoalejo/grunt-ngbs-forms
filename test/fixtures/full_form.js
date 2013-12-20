@@ -131,6 +131,21 @@ module.exports = function() {
         content: '<p>static no wrapper content</p>',
       },
 
+      checkbox: {
+        kind: 'checkbox',
+        label: 'My checkbox',
+      },
+
+      radios: {
+        kind: 'radio',
+        label: 'My radios',
+        options: {
+          foo: 'Foo option',
+          bar: 'Bar option',
+          baz: 'Baz option',
+        },
+      },
+
       mysubmit: {
         kind: 'submit',
         label: 'Send button',

@@ -153,6 +153,33 @@
 
   <p>static no wrapper content</p>
 
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" name="f0checkbox" id="f0checkbox" ng-model="data.checkbox">
+      My checkbox
+    </label>
+  </div>
+
+  <div class="radio">
+    <label>
+      <input id="f0radios0" value="foo" type="radio" name="f0radios" ng-model="data.radios">
+      Foo option
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+      <input id="f0radios1" value="bar" type="radio" name="f0radios" ng-model="data.radios">
+      Bar option
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+      <input id="f0radios2" value="baz" type="radio" name="f0radios" ng-model="data.radios">
+      Baz option
+    </label>
+  </div>
+
+
   <div>
     <p>&nbsp;</p>
     <button type="submit" class="btn btn-primary" ng-disabled="f0.sent && !f0.$valid">Send button</button>
