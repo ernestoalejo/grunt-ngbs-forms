@@ -135,6 +135,12 @@ module.exports = function() {
         label: 'Send button',
       },
 
+      mysubmitadditional: {
+        kind: 'submit',
+        label: 'Send button',
+        additionalContent: '<a href="#">Cancel</a>',
+      },
+
       mysubmitattrs: {
         kind: 'submit',
         label: 'Send button',

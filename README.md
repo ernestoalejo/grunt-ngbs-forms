@@ -545,6 +545,25 @@ return {
 };
 ```
 
+#### additionalContent
+Type: `String`
+Default: ``
+
+Additional content appended next to the submit button. It can be used to generate
+a cancel button, for example.
+
+```js
+return {
+  fields: {
+    mysubmit: {
+      kind: 'submit',
+      additionalContent: 'Next to the button',
+    },
+  },
+};
+```
+
+
 ### Select field
 Generates a select tag in the form.
 
@@ -662,9 +681,44 @@ Content of the field.
 ```js
 return {
   fields: {
-    myselect: {
+    static: {
       kind: 'static',
       content: 'content of the field',
+    },
+  },
+};
+```
+
+
+### Static field (no wrapping)
+Generates a static text in the form, directly, without label or any other
+kind of wrapping.
+
+It can be used in pairs to generate start and end HTML needed to wrap parts
+of the form in a Bootstrap panel, for example.
+
+
+#### content
+Type: `String`
+Default: ``
+
+Content of the field.
+
+```js
+return {
+  fields: {
+    static: {
+      kind: 'staticNoWrapper',
+      content: '<div class="panel">',
+    },
+
+    otherfield: {
+      kind: 'input',
+    },
+
+    staticend: {
+      kind: 'staticNoWrapper',
+      content: '</div>',
     },
   },
 };
@@ -896,6 +950,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 2013-12-20   v0.14.0  Add additional content to submit fields. Add static field without any kind of wrapping.
 * 2013-12-16   v0.13.0  Add email validation.
 * 2013-12-13   v0.12.2  Switch off autofill in forms.
 * 2013-12-04   v0.12.1  Fix container attributes.
