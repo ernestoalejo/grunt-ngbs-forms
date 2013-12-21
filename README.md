@@ -1095,6 +1095,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 2013-12-20   v0.16.1  Re-order trySubmit func and setPristine call.
 * 2013-12-20   v0.16.0  Add checkbox & radio kind types.
 * 2013-12-20   v0.15.0  Add maxlength validation.
 * 2013-12-20   v0.14.0  Add additional content to submit fields. Add static field without any kind of wrapping.
