@@ -50,6 +50,7 @@ module.exports = function() {
         validations: [
           ['integer', 'integer required'],
           ['minvalue:10', 'at least 10 required'],
+          ['maxvalue:99', 'at max 99 required'],
         ],
       },
 

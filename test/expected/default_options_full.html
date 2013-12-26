@@ -62,12 +62,13 @@
   <div class="form-group" ng-class="{'has-error': f0.sent && (f0['f0myint'].$invalid)}">
 
     <div>
-      <input type="number" placeholder="" class="form-control" name="f0myint" id="f0myint" ng-model="data.myint" min="10">
+      <input type="number" placeholder="" class="form-control" name="f0myint" id="f0myint" ng-model="data.myint" min="10" max="99">
     </div>
 
     <span class="help-block" ng-show="f0.sent && (f0['f0myint'].$invalid)">
       <span ng-show="f0['f0myint'].$error.number">integer required</span>
       <span ng-show="f0['f0myint'].$error.min">at least 10 required</span>
+      <span ng-show="f0['f0myint'].$error.max">at max 99 required</span>
     </span>
 
   </div>

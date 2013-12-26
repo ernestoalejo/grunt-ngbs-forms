@@ -1025,6 +1025,28 @@ return {
 };
 ```
 
+#### maxvalue
+Fields: `input`
+Arguments:
+  1) The value to check (inclusive)
+
+Checks the integer to see if it's equal or less than the value. It requires
+an input with the number type (see example).
+
+```js
+return {
+  fields: {
+    myinput: {
+      kind: 'input',
+      type: 'number',
+      validations: [
+        ['maxvalue:3', 'the integer should be 3 or less'],
+      ],
+    },
+  },
+};
+```
+
 #### date
 Fields: `input`
 
@@ -1095,6 +1117,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 2013-12-26   v0.17.0  Add maxvalue validation.
 * 2013-12-20   v0.16.1  Re-order trySubmit func and setPristine call.
 * 2013-12-20   v0.16.0  Add checkbox & radio kind types.
 * 2013-12-20   v0.15.0  Add maxlength validation.
