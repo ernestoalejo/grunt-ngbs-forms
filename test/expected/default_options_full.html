@@ -161,25 +161,43 @@
     </label>
   </div>
 
-  <div class="radio">
-    <label>
-      <input id="f0radios0" value="foo" type="radio" name="f0radios" ng-model="data.radios">
-      Foo option
-    </label>
-  </div>
-  <div class="radio">
-    <label>
-      <input id="f0radios1" value="bar" type="radio" name="f0radios" ng-model="data.radios">
-      Bar option
-    </label>
-  </div>
-  <div class="radio">
-    <label>
-      <input id="f0radios2" value="baz" type="radio" name="f0radios" ng-model="data.radios">
-      Baz option
-    </label>
+  <div class="form-group">
+    <label for="" class="control-label">My radios</label>
+
+    <div class="radio">
+      <label>
+        <input id="f0radios0" value="foo" type="radio" name="f0radios" ng-model="data.radios">
+        Foo option
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input id="f0radios1" value="bar" type="radio" name="f0radios" ng-model="data.radios">
+        Bar option
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input id="f0radios2" value="baz" type="radio" name="f0radios" ng-model="data.radios">
+        Baz option
+      </label>
+    </div>
+
+
   </div>
 
+  <div class="form-group" ng-class="{'has-error': f0.sent && (f0['f0url'].$invalid)}">
+    <label for="f0url" class="control-label">My url</label>
+
+    <div>
+      <input type="url" placeholder="" class="form-control" name="f0url" id="f0url" ng-model="data.url">
+    </div>
+
+    <span class="help-block" ng-show="f0.sent && (f0['f0url'].$invalid)">
+      <span ng-show="f0['f0url'].$error.url">url required</span>
+    </span>
+
+  </div>
 
   <div>
     <p>&nbsp;</p>

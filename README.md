@@ -732,7 +732,7 @@ Generates a checkbox input field in the form.
 Type: `String`
 Default: ``
 
-Label for the checkbox input.
+Label for the list of checkboxes.
 
 ```js
 return {
@@ -1089,7 +1089,7 @@ return {
 };
 ```
 
-#### maxDate
+#### maxdate
 Fields: `input`
 Arguments:
   1) The value to check
@@ -1111,12 +1111,33 @@ return {
 };
 ```
 
+#### url
+Fields: `input`
+
+Adds a message if the input value is not a valid url. The input type
+should be set to url for this to work (see example).
+
+```js
+return {
+  fields: {
+    myinput: {
+      kind: 'input',
+      type: 'url'
+      validations: [
+        ['url', 'url required'],
+      ],
+    },
+  },
+};
+```
+
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 
 ## Release History
+* 2013-12-28   v0.18.0  Add url validation. Ackwnoledge label for radios.
 * 2013-12-26   v0.17.0  Add maxvalue validation.
 * 2013-12-20   v0.16.1  Re-order trySubmit func and setPristine call.
 * 2013-12-20   v0.16.0  Add checkbox & radio kind types.

@@ -147,6 +147,15 @@ module.exports = function() {
         },
       },
 
+      url: {
+        kind: 'input',
+        type: 'url',
+        label: 'My url',
+        validations: [
+          ['url', 'url required'],
+        ],
+      },
+
       mysubmit: {
         kind: 'submit',
         label: 'Send button',
