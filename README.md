@@ -1137,6 +1137,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 2013-12-28   v0.18.1  Required validation can be applied to select fields.
 * 2013-12-28   v0.18.0  Add url validation. Ackwnoledge label for radios.
 * 2013-12-26   v0.17.0  Add maxvalue validation.
 * 2013-12-20   v0.16.1  Re-order trySubmit func and setPristine call.
