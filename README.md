@@ -690,27 +690,6 @@ return {
 ```
 
 
-#### containerAttrs
-Type: `Object`
-Default: `{}`
-
-Additional arguments for the field container. It's an object of *name: value* items.
-
-```js
-return {
-  fields: {
-    mystatic: {
-      kind: 'static',
-      containerAttrs: {
-        myname: 'myvalue',
-        myname2: 'myvalue2',
-      },
-    },
-  },
-};
-```
-
-
 ### Static field (no wrapping)
 Generates a static text in the form, directly, without label or any other
 kind of wrapping.
@@ -1158,6 +1137,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 2014-01-06   v0.18.3  Remove container attributes for static fields, they're not used.
 * 2014-01-06   v0.18.2  Add container attributes to static fields.
 * 2013-12-28   v0.18.1  Required validation can be applied to select fields.
 * 2013-12-28   v0.18.0  Add url validation. Ackwnoledge label for radios.
