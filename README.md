@@ -1131,12 +1131,40 @@ return {
 };
 ```
 
+#### match
+Fields: `input`
+Arguments:
+  1) The other field to check
+
+Adds a message if the input value doesn't match the other field. It requires a
+custom "match" directive in the Angular world.
+
+```js
+return {
+  fields: {
+    password: {
+      kind: 'input',
+      type: 'password',
+    },
+
+    repeat_password: {
+      kind: 'input',
+      type: 'password'
+      validations: [
+        ['match:password', 'match required with the other password field'],
+      ],
+    },
+  },
+};
+```
+
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 
 ## Release History
+* 2014-01-06   v0.19.0  Add match validation.
 * 2014-01-06   v0.18.3  Remove container attributes for static fields, they're not used.
 * 2014-01-06   v0.18.2  Add container attributes to static fields.
 * 2013-12-28   v0.18.1  Required validation can be applied to select fields.
