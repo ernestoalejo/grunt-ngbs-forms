@@ -1164,6 +1164,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 2014-01-06   v0.19.1  Fix match validation.
 * 2014-01-06   v0.19.0  Add match validation.
 * 2014-01-06   v0.18.3  Remove container attributes for static fields, they're not used.
 * 2014-01-06   v0.18.2  Add container attributes to static fields.
