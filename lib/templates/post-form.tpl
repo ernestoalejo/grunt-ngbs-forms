@@ -1,2 +1,0 @@
-<% if (!noFieldset) { %></fieldset>
-<% } %></form>

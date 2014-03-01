@@ -1,1 +1,0 @@
-  <% if (error) { %><span ng-show="<%= formName %>['<%= name %>'].$error.<%= error %>"><%= msg %></span><% } %><% if (customError) { %><span ng-show="!<%= formName %>['<%= name %>'].$dirty && <%= formName %>['<%= name %>'].$valid && (<%= customError %>)"><%= msg %></span><% } %>

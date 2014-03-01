@@ -48,27 +48,19 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     ngbs_forms: {
-      default_options: {
+      min_example: {
         options: {
         },
         files: {
-          'tmp/default_options.html': ['test/fixtures/simple_form.html'],
+          'tmp/min_example.html': ['test/fixtures/min_example.html'],
         },
       },
-
-      default_options_full: {
+      cwd_example: {
         options: {
+          formsCwd: 'test/fixtures/folder',
         },
         files: {
-          'tmp/default_options_full.html': ['test/fixtures/full_form.html'],
-        },
-      },
-
-      testing: {
-        options: {
-        },
-        files: {
-          'tmp/testing.html': ['test/fixtures/testing.html'],
+          'tmp/cwd_example.html': ['test/fixtures/folder/cwd_example.html'],
         },
       },
     },
@@ -78,19 +70,12 @@ module.exports = function(grunt) {
       tests: ['test/*_test.js'],
     },
 
-    bump: {
-      options: {
-        pushTo: 'origin',
-      },
-    },
-
   });
 
   // Actually load this plugin's task(s).
   grunt.loadTasks('tasks');
 
   // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-bump');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
@@ -99,6 +84,8 @@ module.exports = function(grunt) {
   // plugin's task(s), then test the result.
   grunt.registerTask('test', ['clean', 'ngbs_forms', 'nodeunit']);
 
+  grunt.registerTask('lint', ['jshint']);
+  
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
 

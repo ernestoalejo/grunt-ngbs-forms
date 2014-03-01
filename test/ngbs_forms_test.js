@@ -27,21 +27,21 @@ exports.ngbs_forms = {
     // setup here if necessary
     done();
   },
-  default_options: function(test) {
+  min_example: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/default_options.html');
-    var expected = grunt.file.read('test/expected/default_options.html');
-    test.equal(actual, expected, 'should describe what the default behavior is.');
+    var actual = grunt.file.read('tmp/min_example.html');
+    var expected = grunt.file.read('test/expected/min_example.html');
+    test.equal(actual, expected, 'should describe what the minimum behavior is.');
 
     test.done();
   },
-  default_options_full: function(test) {
+  cwd_example: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/default_options_full.html');
-    var expected = grunt.file.read('test/expected/default_options_full.html');
-    test.equal(actual, expected, 'should describe what the custom option(s) behavior is.');
+    var actual = grunt.file.read('tmp/cwd_example.html');
+    var expected = grunt.file.read('test/expected/cwd_example.html');
+    test.equal(actual, expected, 'should describe what the minimum behavior is.');
 
     test.done();
   },

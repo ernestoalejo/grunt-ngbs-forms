@@ -7,17 +7,15 @@
  */
 'use strict';
 
-
 module.exports = function(grunt) {
+  var forms = require('ngbs-forms'),
+      path = require('path'),
+      _ = require('underscore'),
+      fs = require('fs');
 
-  var buildFormFunc = require('../lib/build-form.js'),
-      path = require('path');
-
-  grunt.registerMultiTask('ngbs_forms', 'Generate forms using Angular for validations and Bootstrap for styles from simple JS descriptions', function() {
+  grunt.registerMultiTask('ngbs_forms', 'Generate forms using Angular for validations and Bootstrap for styles from short and concise descriptions of the fields.', function() {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
-      templateStartDelimiter: '<%',
-      templateEndDelimiter: '%>',
       formsCwd: '.',
     });
 
@@ -28,11 +26,14 @@ module.exports = function(grunt) {
         return;
       }
 
-      var content = grunt.file.read(path.resolve(src));
-      grunt.file.write(file.dest, grunt.template.process(content, {
-        data: {
-          buildForm: buildFormFunc(grunt, options.formsCwd),
-        }
+      var contents = fs.readFileSync(path.resolve(src));
+      grunt.file.write(file.dest, _.template(contents.toString(), {
+        buildForm: function(filename) {
+          var frmPath = path.join(options.formsCwd, filename);
+          var frmContents = fs.readFileSync(path.resolve(frmPath));
+          var source = forms.parse(frmContents.toString());
+          return forms.generate(source);
+        },
       }));
 
       grunt.verbose.writeln('File "' + file.dest + '" created.');
