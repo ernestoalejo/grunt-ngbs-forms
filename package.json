@@ -1,7 +1,7 @@
 {
   "name": "grunt-ngbs-forms",
   "description": "Generate forms using Angular for validations and Bootstrap for styles from short and concise descriptions of the fields.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "https://github.com/ernestoalejo/grunt-ngbs-forms",
   "author": {
     "name": "Ernesto Alejo"
