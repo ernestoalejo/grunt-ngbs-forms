@@ -77,6 +77,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 2014-03-14   v1.0.1   Update lib.
 * 2014-02-28   v1.0.0   Use the independent ngbs-forms library with the new file format.
 * 2014-01-06   v0.19.1  Fix match validation.
 * 2014-01-06   v0.19.0  Add match validation.
