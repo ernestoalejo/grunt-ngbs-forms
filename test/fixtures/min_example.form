@@ -1,8 +1,0 @@
-
-form {
-  fields {
-    input foo {
-      label = 'My label'
-    }
-  }
-}

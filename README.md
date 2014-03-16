@@ -67,7 +67,7 @@ The *testing.html* file should have something like this:
 
 ```html
 ...html before the form...
-<%= buildForm('path/to/file.form') %>
+<%= buildForm('path/to/file.form.js') %>
 ...html after the form...
 ```
 

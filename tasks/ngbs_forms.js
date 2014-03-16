@@ -30,9 +30,7 @@ module.exports = function(grunt) {
       grunt.file.write(file.dest, _.template(contents.toString(), {
         buildForm: function(filename) {
           var frmPath = path.join(options.formsCwd, filename);
-          var frmContents = fs.readFileSync(path.resolve(frmPath));
-          var source = forms.parse(frmContents.toString());
-          return forms.generate(source);
+          return forms.generate(path.resolve(frmPath));
         },
       }));
 
