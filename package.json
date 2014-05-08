@@ -44,7 +44,7 @@
     "generator"
   ],
   "dependencies": {
-    "ngbs-forms": "~1.2.1",
+    "ngbs-forms": "~1.3.0",
     "underscore": "~1.6.0"
   }
 }
